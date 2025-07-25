@@ -3,14 +3,18 @@
 # Agentar-DeepFinance-100K
 
 <div>
-A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimization
-</div>
 </div>
 
+</div>
+<div align="center">
+  <h3>一个 · 大规模 · 金融行业深度 · COT数据集</h3>
+</div>
 <div>
 <br>
 
 <div align="center">
+
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 [![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/inclusionAI/Agentar-DeepFinance-100K)
 [![arXiv](https://img.shields.io/badge/arXiv-2507.12901-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2507.12901)
@@ -24,40 +28,44 @@ A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimi
 
 </div>
 
-
-## :fire: ​最新动态
-
-- **2025.7.25**  Agentar-DeepFinance-100K的数据已经开源，其中15K的FinCAS安全合规数据，因存在有毒文本，遵循开源惯例未进行开源 🔥🔥🔥
-- **2025.7.12** Agentar-DeepFinance-100K的技术报告《Agentar-DeepFinance-100K: A Large-Scale Financial Dataset via
-  Systematic Chain-of-Thought Synthesis Optimization》已发布 🚀🚀🚀
-
-## :book: 简介
-
-![简介](.assets/intro.png)
-从通用的推理模型中提炼高质量金融思维链 (CoT) ，为构建金融推理模型提供了一条高效且可行的途径。然而，现有的 CoT 合成方法只是进行简单的浅层采样，导致如何构建一个高质量的金融推理知识空间尚未得到深入研究。为了构建高质量推理数据，我们进行了系统性的CoT合成优化，从三个角度对上述问题进行解决：
-
-**（1）全面的 CoT 合成框架：** 我们的流程引入多视角知识提取 (MKE) 和自反思重写 (SCR) ，以生成详尽而深入的金融推理轨迹。
-
-**（2）“CoT Cube”系统性研究：** 旨在分析影响 CoT 有效性的关键因素，例如必要性、长度和合成器，从而为构建高质量的金融 CoT 提供指导。
-
-**（3）行业专家标注的行业场景QA：** 为了填补与真实世界用户交互的差距，我们还系统地合成了行业场景问题以反映真实世界中需要的金融能力，并由领域专家进行注释。
-
-基于上面的合成优化，我们公开发布 Agentar-DeepFinance-100K，以推动金融推理模型研究。
-
-## :rocket: 全面的CoT合成框架
-
 ![全面的CoT合成流程](.assets/framework.png)
 
-**1. 多方面知识提取：** 该方法旨在实现详尽而全面的金融推理知识建模，
+当前，**高质量的金融推理链 (Chain of Thought, CoT)** 是构建金融领域专属推理模型的一条高效且可行的路径。然而，目前主流的 CoT 合成方法通常停留于浅层采样阶段，未能系统性探索如何构建一个高效、深入的金融推理知识体系，导致数据质量和推理深度的提升存在瓶颈。为解决这一问题，我们针对金融推理的复杂需求，设计了一套系统化的 CoT 合成优化方案从而深度挖掘CoT，并从三个核心维度着手，形成 **Agentar-DeepFinance-100K**：
 
-- `Q2A (Direct Curation)` 直接从种子语料库中获取结构良好的问答对
-- `A2Q (Counterfactual Augmentation)` 通过反事实扰动增强关键知识点的因果连通性
-- `T2Q (CoT Knowledge Mining)` 挖掘思维链中隐含的推理依赖
+**（1）深度CoT → 知识扩增：** 通过引入**多视角反事实知识提取（Multi-perspective Knowledge Extraction, MKE）技术**，我们从问题、思考过程以及最终回答的多层次内容中，运用反事实扩增策略，生成更加多样化且深入的金融推理链。同时，扩增数据能够更真实地反映金融问题的复杂动态，打造**覆盖多种场景需求**的金融推理轨迹数据。
 
-**2. 自反思改写：** 为确保数据集的整体准确性，现有方法中的一种常见做法是丢弃缺乏正确采样答案的 QA 对。然而，这些被丢弃的 QA 对通常涉及复杂的推理过程，可以作为提升模型能力的宝贵资源。自反思改写则是将有缺陷的推理轨迹通过适当的纠正机制转化为正确的训练语料。
-![消融实验](.assets/ablation.png)
+**（2）深层CoT → 知识抽取：** 我们从**多个维度深入分析影响 CoT 质量的关键要素**，包括CoT的必要性、思维链长度的适配性以及合成器的优化设计。通过精准识别和分析这些要素，我们为高质量金融 CoT 数据的设计奠定了理论基础，同时提供了**一套指导性规则**，用以指导后续更优的推理链生成。
 
-## 🛠️ “CoT Cube”系统性研究
+**（3）深融CoT → 人机协同验证：** 面对实际金融业务中的高精度要求，我们进一步设计了结合**人类专家验证与自反思重写（Self-reflection and Rewriting, SCR）技术**的验证环节。具体操作中，对于合成失败的难例，结合模型自反思与领域专家精准注释与校验，通过自反思与领域专家协同标注的方式，我们有效**提升了 CoT 数据的合成成功率与推理精度**，使其更符合真实业务的需求。
+
+基于上述优化流程，我们最终构建了一套高质量的大规模金融推理数据集**Agentar-DeepFinance-100K**，面向金融推理模型的研究与应用开放。通过深度优化数据合成与验证逻辑，该数据集**致力于推动金融推理领域的技术探索**，助力**高效、安全、专业**的金融智能化应用。我们的研究不仅为金融推理链的生成提供了**方法创新**，还为金融大语言模型在深度金融推理领域的应用奠定了坚实基础，为**构建具备更精准能力的金融智能体**提供了重要参考。
+
+## 💎 为什么Agentar-DeepFinance-100K具有行业通用价值？
+
+- **深度与精准并重的CoT数据能力**  
+  通过**深度CoT知识扩增技术与CoT知识验证技术**，生成了**高质量、覆盖深度**的推理数据。其数据深度能够有效提升模型在复杂金融场景下的推理和决策能力，无论是高阶金融计算还是合规性分析，都能适配不同机构的多样化业务需求。
+
+- **真实场景驱动的需求贴合**
+
+  数据集由**领域专家严格标注与校准**，确保内容贴近实际业务场景。这种“**场景对齐**”的设计理念，不仅提升了数据集的落地适用性，还显著降低了金融机构智能体部署过程中遇到的“场景适配成本”，推动从实验室成果到实战能力的无缝衔接。
+
+- **方法论的通用性与标准化价值**
+
+  在多维CoT知识抽取环节，针对**推理必要性、文本长度、逻辑合成器**等关键指标进行实验，形成了**可复用的“高质量CoT评估框架”**。这一框架不仅对数据集的构建提供了理论支持，更为金融机构自主优化和扩展自身业务场景数据提供了方法论指导，推动行业技术标准化的发展。
+
+- **全链路智能体的能力培育**
+
+  数据集内包含的金融CoT，**覆盖金融分析与解读、金融数学、金融合规与安全**等核心任务模块。这些模块化的推理过程，为训练支持金融业务全流程的“**全链路智能体**”打下了扎实基础，满足金融机构在多任务、多环节智能化需求上的长期追求。
+
+Agentar-DeepFinance-100K的价值不仅在于其数据质量的优秀表现，更在于其以**系统性方法**解决了行业长期面临的“**场景脱节、推理能力不足、数据质量不一**”等难题。通过提供“**可复用、可扩展、可信任**”的底层能力支撑，它为金融智能体的规模化应用铺平了道路，是推动行业智能化升级的重要基石。
+
+## 💻 谁应使用Agentar-DeepFinance-100K?
+本数据集适用于：
+- **金融智能体研发团队**：验证并提升模型在复杂金融场景中的推理能力，优化金融领域深度推理能力，通过高质量CoT数据集提升智能体解决问题能力，满足多样化业务需求。
+- **金融机构技术团队**：降低智能体适配成本，依托实际业务数据快速落地应用，并通过标准化方法扩展自有场景CoT数据，实现技术自主优化。
+- **学术研究者**：获取多维金融推理与监管安全的真实场景数据，构建高可信评测环境，推动技术前沿探索与行业标准化。
+
+## 🛠️ “CoT Cube”系统性实验
 
 **1. CoT必要性实验**：无论任务类型和难度如何，加入 CoT 都能持续提高模型性能，特别是在复杂的推理任务和难题中。
 
@@ -261,8 +269,15 @@ A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimi
   </tbody>
 </table>
 
-## 🙏 致谢
+## 🔥 ​最新动态
 
+- **2025.7.25**  **Agentar-DeepFinance-100K数据集**已经开源，其中1K高质量合成精标数据（FinRA: financial real annotations）、反事实合成与自反思改写数据由于合规审核原因将在后续进行披露，另有15K的FinCAS安全合规数据，因存在有毒文本，遵循开源惯例未进行开源🔥🔥🔥
+- **2025.7.24** **Finova金融评测基准**已发布，Finova从智能体执行任务能力、复杂推理能力、安全合规能力这三个真实场景中最受关注的维度来对模型进行考察，其中Agentar-DeepFinance系列CoT数据集对复杂推理能力、安全合规评测能力进行了深度支持🚀🚀🚀
+- **2025.7.22** **Agentar-Fin-R1**的技术报告《Agentar-Fin-R1: Enhancing Financial Intelligence through Domain Expertise, Training Efficiency, and Advanced Reasoning》已发布，Agentar-Fin-R1使用了部分Agentar-DeepFinance系列CoT数据集进行训练，Agentar-DeepFinance系列CoT数据集助力Agentar-Fin-R1在所有金融评测基准上——包括Fineva、FinEval、FinanceIQ和蚂蚁数科全新提出的Finova——均达到业界最优水平，超越业界开源金融大模型，也包括GPT-o1、DeepSeek-R1等超大尺寸通用推理模型。 🚀🚀🚀
+- **2025.7.12** **Agentar-DeepFinance-100K**的技术报告《Agentar-DeepFinance-100K: A Large-Scale Financial Dataset via
+  Systematic Chain-of-Thought Synthesis Optimization》已发布 🚀🚀🚀
+
+## 🙏 致谢
 - **公开数据集**: [FinCorpus](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus), [Finance-Instruct-500K](https://huggingface.co/datasets/Josephgflowers/Finance-Instruct-500k), [FinCUGE](https://huggingface.co/datasets/Maciel/FinCUGE-Instruction), [FinQA](https://arxiv.org/abs/2109.00122), [FinancialData](https://huggingface.co/datasets/csujeong/financial_data), [Quant-Trading-Instruct](https://huggingface.co/datasets/lumalik/Quant-Trading-Instruct)
 
 - 感谢**长沙数字天蚂信息技术有限公司**、**数字天蚂（重庆）信息技术有限公司**：负责数据标注的运营和管理工作，汇集了充足且专业的金融行业专家标注资源，为提供金融高质量数据的构建提供了有力的保障。
@@ -286,5 +301,5 @@ A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimi
 
 ## 🤝 联系我们
 
-非常感谢您对Agentar系列的关注！如果您有兴趣向我们的研究团队或产品团队留言，欢迎通过我们的官方邮箱与我们联系：[yanchang.zxk@antgroup.com]。我们的团队将竭诚为您提供帮助和支持。
+非常感谢您对Agentar系列的关注！如果您有兴趣向我们的研究团队或产品团队留言，或者想要与我们一起共建金融高质量COT数据集，欢迎通过我们的官方邮箱与我们联系：[yanchang.zxk@antgroup.com]，我们的团队将竭诚为您提供帮助和支持。
 
