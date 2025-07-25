@@ -12,9 +12,8 @@ A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimi
 
 <div align="center">
 
-[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
-[![GitHub Stars](https://img.shields.io/github/stars/zwhe99/DeepMath?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=000000)](https://github.com/zwhe99/DeepMath)
-[![arXiv](https://img.shields.io/badge/arXiv-2504.11456-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2504.11456)
+[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/inclusionAI/Agentar-DeepFinance-100K)
+[![arXiv](https://img.shields.io/badge/arXiv-2507.12901-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2507.12901)
 </div>
 
 </div>
@@ -22,9 +21,6 @@ A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimi
 <div align="center">
 
 **中文** | [**EN**](README.md)
-
-[Hugging Face](<https://huggingface.co/datasets/inclusionAI/Agentar-DeepFinance-100K>) 🤗 [Arxiv](<https://arxiv.org/abs/2507.12901>) 🤖
-
 
 </div>
 
@@ -270,6 +266,9 @@ A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimi
 - **公开数据集**: [FinCorpus](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus), [Finance-Instruct-500K](https://huggingface.co/datasets/Josephgflowers/Finance-Instruct-500k), [FinCUGE](https://huggingface.co/datasets/Maciel/FinCUGE-Instruction), [FinQA](https://arxiv.org/abs/2109.00122), [FinancialData](https://huggingface.co/datasets/csujeong/financial_data), [Quant-Trading-Instruct](https://huggingface.co/datasets/lumalik/Quant-Trading-Instruct)
 
 - 感谢**长沙数字天蚂信息技术有限公司**、**数字天蚂（重庆）信息技术有限公司**：负责数据标注的运营和管理工作，汇集了充足且专业的金融行业专家标注资源，为提供金融高质量数据的构建提供了有力的保障。
+
+## 🔐 数据脱敏说明
+为遵循金融数据安全与隐私合规要求，本项目对外开源的版本已对原始数据进行进一步去污去毒处理。因此，基于开源版本数据所进行的训练结果，可能与我们技术报告中公布的完整版结果存在少量差异。
 
 ## 📚 引用
 
