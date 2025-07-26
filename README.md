@@ -3,69 +3,76 @@
 # Agentar-DeepFinance-100K
 
 <div>
-A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimization
-</div>
 </div>
 
+</div>
+<div align="center">
+  <h3>A · large-scale · in-depth financial industry · COT dataset</h3>
+</div>
 <div>
 <br>
 
 <div align="center">
 
-[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/zwhe99/DeepMath-103K)
-[![GitHub Stars](https://img.shields.io/github/stars/zwhe99/DeepMath?style=for-the-badge&logo=github&logoColor=white&label=Stars&color=000000)](https://github.com/zwhe99/DeepMath)
-[![arXiv](https://img.shields.io/badge/arXiv-2504.11456-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2504.11456)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+
+[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/inclusionAI/Agentar-DeepFinance-100K)
+[![arXiv](https://img.shields.io/badge/arXiv-2507.12901-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2507.12901)
 </div>
 
 </div>
 
 <div align="center">
 
-[**中文**](README_zh.md) | **EN**
+**中文** | [**EN**](README.md)
 
 </div>
 
+![全面的CoT合成流程](.assets/framework.png)
 
-## :fire: ​News
+Currently, **high-quality financial Chain of Thought(CoT)** represent an efficient and feasible pathway to building specialized reasoning models for the financial domain. However, mainstream CoT synthesis methods often remain at a shallow sampling stage, failing to systematically explore how to construct an effective and in-depth financial reasoning knowledge system. This limitation creates bottlenecks in improving data quality and reasoning depth. To address this issue, we have designed a systematic optimization framework for CoT synthesis tailored to the complex demands of financial reasoning. This approach deeply mines CoT by focusing on three core dimensions, culminating in the creation of **Agentar-DeepFinance-100K**:
 
-- **2025.7.25** Agentar-DeepFinance-100K open source release! The 15K Financial Safety and Compliance (FinCAS) Dataset has not been relased due to the presence of toxic text 🔥🔥🔥
-- **2025.7.12** Our technical report "Agentar-DeepFinance-100K: A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimization" has been released 🚀🚀🚀
+**(1) Deep CoT → Knowledge Expansion**: By introducing **Multi-perspective Knowledge Extraction (MKE)**, we leverage counterfactual augmentation strategies to generate more diverse and in-depth financial reasoning chains from multiple layers of content, including questions, thought processes, and final answers. The augmented data better reflects the complex dynamics of real-world financial problems, creating reasoning trajectories that **cover a wide range of scenarios**, ensuring relevance across various use cases.
 
+**(2) Deeper CoT → Knowledge Extraction**: We conduct a **multidimensional analysis of the key factors influencing CoT quality**, including the necessity of CoT, the appropriate length of reasoning chains, and the optimal design of synthesizers. Through precise identification and evaluation of these elements, we establish a theoretical foundation for designing high-quality financial CoT datasets. Additionally, we provide **a set of guiding principles** to inform the generation of even more robust reasoning chains.
 
+**(3) Deeply Integrated CoT → Human-AI Collaborative Validation**: To meet the high-precision requirements of real-world financial applications, we incorporate a validation process **combining human expert verification with Self-reflection and Rewriting (SCR) technology**. For challenging cases where synthesis fails, we integrate model-driven self-reflection with domain expert annotations and validations. This collaborative human-AI labeling approach significantly **enhances the success rate and accuracy of CoT synthesis**, aligning it more closely with practical business needs.
 
-## :book: Introduction
+Through this optimized workflow, we have constructed **Agentar-DeepFinance-100K**, a high-quality, large-scale dataset for financial reasoning research and applications. By refining data synthesis and validation logic, this dataset **aims to advance technological exploration in financial reasoning** and empower **efficient, secure, and professional** financial AI applications. Our research not only introduces **methodological innovations** for generating financial reasoning chains but also lays a solid foundation for applying large language models in advanced financial reasoning tasks. It provides critical insights for **developing financial agents with enhanced precision and capabilities**.
 
-![简介](.assets/intro.png)
+## 💎 Why Does Agentar-DeepFinance-100K Have Industry-Wide Value?
 
-Recent advancements in large language models (LLMs) have demonstrated remarkable general reasoning capabilities, holding significant potential for applications in the financial domain, a field that requires robust and reliable reasoning. It has been demonstrated that distilling high-quality chain-of-thought (CoT) rationales from advanced general reasoning models offers a promising and efficient path to the financial reasoning model. However, existing CoT synthesis methods suffer from shallow CoT sampling, leaving the question of how to construct a well-designed knowledge space for finance reasoning unexplored. To this end, we make the following improvements:
+- **CoT Data with Depth and Precision** 
 
+  By leveraging **Multi-perspective Knowledge Extraction and Self-reflection techniques**, Agentar-DeepFinance-100K generates **high-quality, deeply layered** reasoning data. The depth of this data effectively enhances the model's reasoning and decision-making capabilities in complex financial scenarios, accommodating diverse institutional needs—from advanced financial computations to compliance analysis.
 
-**(1) Comprehensive CoT Synthesis Pipeline:** Beginning with the curated seed corpora, our methodology integrates the Multi-perspective Knowledge Extraction (MKE) strategy and the Self-Corrective Rewriting (SCR) mechanism for CoT sampling. On the one hand, this pipeline demonstrates enhanced capabilities in extracting exhaustive domain knowledge for financial reasoning. On the other hand, it enables the sampling of more complex and challenging questions, leading to more intricate reasoning trajectories.
+- **Alignment with Real-World Scenarios**
 
-**(2) "CoT Cube" Systematic Investigation:** We conducted a systematic investigation regarding critical factors influencing CoT effectiveness, including necessity, length, and synthesizers. It provides guidance for constructing high-quality financial CoTs.
+  The dataset is **meticulously annotated and calibrated by domain experts**, ensuring it is closely aligned with actual business environments. This **"scenario alignment"** design approach not only increases the dataset's applicability in real-world use cases but also significantly reduces the "scenario adaptation costs" associated with deploying intelligent systems in financial institutions, enabling seamless transitions from research results to practical implementation.
 
-**(3) Industry-expert Annotated Scenario QA:** To bridge the gap with real-world user interactions, we systematically synthesized industry scenario questions that reflect the financial capabilities required in practical settings, with annotations provided by domain experts.
+- **Universality and Standardization of Methodology**
 
-Building on these systematic synthesis optimizations, we publicly release AntDT-DeepFinance-300K, hoping to advance the research in financial reasoning models.
+  During the multidimensional CoT knowledge extraction process, key factors such as **reasoning necessity, text length, and logic synthesizer** design were rigorously tested. This led to the development of **a reusable "High-Quality CoT Evaluation Framework"**. The framework not only provides theoretical support for constructing the dataset but also offers methodological guidance for financial institutions to independently optimize and expand their context-specific datasets, thereby driving the development of industry-wide technical standards.
 
+- **Fostering End-to-End Intelligent Agent Capabilities**
 
-## :rocket: Comprehensive CoT Synthesis Pipeline
+  The dataset includes financial CoTs that **span critical task modules such as financial analysis and interpretation, financial mathematics, and compliance and security**. These modular reasoning processes lay a solid foundation for **training end-to-end intelligent agents** capable of supporting the full spectrum of financial operations, addressing the long-term pursuit of multi-task, multi-step intelligent solutions by financial institutions.
 
-![pipeline](.assets/framework.png)
+The value of Agentar-DeepFinance-100K lies not only in its outstanding data quality but also in its ability to **systematically address** longstanding industry challenges, such as **"scenario misalignment, insufficient reasoning capabilities, and inconsistent data quality."** By offering **reusable, scalable, and trustworthy** foundational capabilities, it paves the way for the large-scale deployment of financial intelligent systems, serving as a crucial cornerstone for driving the industry's intelligent transformation.
 
-**1. Multi-Perspective Knowledge Extraction：** This method aims to achieve comprehensive and exhaustive financial reasoning knowledge modeling:
+## 💻 Who Should Use Agentar-DeepFinance-100K?
 
-- `Q2A (Direct Curation)`: Directly extract well-structured question-answer pairs from the seed corpus.
-- `A2Q (Counterfactual Augmentation)`: Enhance the causal connectivity of key knowledge points through counterfactual perturbations.
-- `T2Q (CoT Knowledge Mining)`: Mine implicit reasoning dependencies within CoTs.
+This dataset is suitable for:
 
-**2. Self-Corrective Rewriting：** A common practice in existing methodologies is to discard QA pairs that lack correctly sampled answers, thereby ensuring the overall accuracy of the dataset. However, these discarded QA pairs often involve intricate reasoning processes, which could serve as valuable resources for enhancing model capabilities. We introduce Self-Corrective Rewriting (SCR) to transform flawed reasoning trajectories into effective learning opportunities through appropriate correction mechanisms.
+- **Financial Intelligent Agent Development Teams**: Validate and enhance model reasoning capabilities in complex financial scenarios, optimize deep reasoning in the financial domain, and leverage high-quality CoT datasets to improve problem-solving abilities, meeting diverse business needs.
 
-![ablation](.assets/ablation.png)
+- **Financial Institution Technical Teams**: Reduce the adaptation costs of intelligent agents, quickly implement applications using real-world business data, and expand institution-specific CoT datasets through standardized methods, enabling technological self-optimization.
 
-## 🛠️ “CoT Cube” Systematic Investigation
+- **Academic Researchers**: Access real-world data on multidimensional financial reasoning and regulatory safety, build high-trust evaluation environments, and drive cutting-edge advancements and industry standardization.
 
-**1. CoT Necessity**：Incorporating CoT consistently improves model performance regardless of task type and difficulty, particularly in complex reasoning tasks (e.g., math) and difficult problems.
+## 🛠️ "CoT Cube" Systematic Experiments
+
+**1. CoT Necessity Experiment**: Regardless of task type and difficulty, incorporating CoT consistently enhances model performance, especially in complex reasoning tasks and challenging problems.
 
 | CoT          | Text Gen. | Analysis & Interp. | NLP   | Compliance & Sec. | Math  | Knowledge QA | Average |
 |--------------|-----------|---------------------|-------|-------------------|-------|--------------|---------|
@@ -110,7 +117,7 @@ Building on these systematic synthesis optimizations, we publicly release AntDT-
 </table>
 
 
-**2. CoT Synthesizer：** The effectiveness of a reasoning model as a CoT synthesizer does not always align with its intrinsic reasoning performance.
+**2. CoT Synthesizer Experiment**: The effectiveness of reasoning models as CoT synthesizers does not always align with their inherent reasoning performance. In our experiments, the CoT quality distilled from QwQ-Plus surpasses that distilled from DeepSeek-R1.
 
 <table>
   <thead>
@@ -222,7 +229,8 @@ Building on these systematic synthesis optimizations, we publicly release AntDT-
   </tbody>
 </table>
 
-**3. CoT Length：** Distilling CoTs with reduced length allows the trained model to provide more concise responses, but may also hurt performance. Financial reasoning requires long CoTs.
+**3. CoT Length Experiment**: Refining and shortening CoT can lead to more concise responses from the trained model but may compromise reasoning capabilities. Financial reasoning models require longer CoT for optimal performance.
+
 
 <table>
   <thead>
@@ -267,25 +275,36 @@ Building on these systematic synthesis optimizations, we publicly release AntDT-
   </tbody>
 </table>
 
-## 🙏 Acknowledgements
+## 🔥 ​最新动态
 
-This work can not be done without the help of the following works:
+- **2025.7.25**  **The Agentar-DeepFinance-100K dataset** has been open-sourced. However, the 1K FinRA (FinRA: financial real annotations)high-quality synthetic fine-annotated data , counterfactual synthetic data, and self-reflection rewritten data will be disclosed later due to compliance review reasons. Additionally, the 15K FinCAS (FinCAS: financial compliance and security) safety compliance data, which contains toxic text, has not been open-sourced in accordance with standard open-source practices.🔥🔥🔥
+- **2025.7.24** **The Finova Financial Evaluation Benchmark** has been released. Finova evaluates models based on three key dimensions most relevant to real-world scenarios: agent task execution capability, complex reasoning ability, and safety compliance. The Agentar-DeepFinance series CoT datasets provide deep support for evaluating complex reasoning and safety compliance capabilities.🚀🚀🚀
+- **2025.7.22** The technical report for **Agentar-Fin-R1**, titled **“Agentar-Fin-R1: Enhancing Financial Intelligence through Domain Expertise, Training Efficiency, and Advanced Reasoning”**, has been released. Agentar-Fin-R1 was trained using a subset of the Agentar-DeepFinance series CoT datasets. These datasets have enabled Agentar-Fin-R1 to achieve state-of-the-art performance across all financial evaluation benchmarks—including Fineva, FinEval, FinanceIQ, and Ant Group’s newly proposed Finova. It has surpassed industry-leading open-source financial large models, as well as general-purpose reasoning models of significantly larger scales such as GPT-o1 and DeepSeek-R1. 🚀🚀🚀
+- **2025.7.12** The technical report for **Agentar-DeepFinance-100K**, titled **“Agentar-DeepFinance-100K: A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimization”**, has been released. 🚀🚀🚀
 
-- **Public Dataset**: [FinCorpus](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus), [Finance-Instruct-500K](https://huggingface.co/datasets/Josephgflowers/Finance-Instruct-500k), [FinCUGE](https://huggingface.co/datasets/Maciel/FinCUGE-Instruction), [FinQA](https://arxiv.org/abs/2109.00122), [FinancialData](https://huggingface.co/datasets/csujeong/financial_data), [Quant-Trading-Instruct](https://huggingface.co/datasets/lumalik/Quant-Trading-Instruct)
+## 🙏 Acknowledgments
+- **We would like to thank Public Dataset**: [FinCorpus](https://huggingface.co/datasets/Duxiaoman-DI/FinCorpus), [Finance-Instruct-500K](https://huggingface.co/datasets/Josephgflowers/Finance-Instruct-500k), [FinCUGE](https://huggingface.co/datasets/Maciel/FinCUGE-Instruction), [FinQA](https://arxiv.org/abs/2109.00122), [FinancialData](https://huggingface.co/datasets/csujeong/financial_data), [Quant-Trading-Instruct](https://huggingface.co/datasets/lumalik/Quant-Trading-Instruct)
 
+- **We would like to thank Changsha Digital Tianma Information Technology Co., Ltd. and Digital Tianma (Chongqing) Information Technology Co., Ltd**. for their efforts in overseeing the operation and management of data annotation. They brought together abundant and highly skilled financial industry expert annotation resources, providing strong support for the construction of high-quality financial data.
+
+## 🔐 Data Desensitization Statement
+To comply with financial data security and privacy regulations, the publicly released version of this project has undergone additional data cleansing and desensitization processes. As a result, the training outcomes based on the open-source version may exhibit minor differences from the full-version results published in our technical report.
 
 ## 📚 Citation
 
 ```
-@article{zhao2025agentar,
-  title={Agentar-DeepFinance-300K: A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimization},
-  author={Zhao, Xiaoke and Zhou, Zhaowen and Chen, Lin and Wang, Lihong and Huang, Zhiyi and Zheng, Kaiyuan and Zheng, Yanjun and Du, Xiyang and Liao, Longfei and Liu, Jiawei and others},
-  journal={arXiv preprint arXiv:2507.12901},
-  year={2025}
+@misc{zhao2025deepfinance,
+      title={Agentar-DeepFinance-100K: A Large-Scale Financial Dataset via Systematic Chain-of-Thought Synthesis Optimization}, 
+      author={Xiaoke Zhao and Zhaowen Zhou and Lin Chen and Lihong Wang and Zhiyi Huang and Kaiyuan Zheng and Yanjun Zheng and Xiyang Du and Longfei Liao and Jiawei Liu and Xiang Qi and Bo Zhang and Peng Zhang and Wei Wang and Zhe Li},
+      year={2025},
+      eprint={2507.12901},
+      archivePrefix={arXiv},
+      primaryClass={cs.CE},
+      url={https://arxiv.org/abs/2507.12901}, 
 }
 ```
 
 ## 🤝 Contact Us
 
-非常感谢您对通义点金系列的关注！如果您有兴趣向我们的研究团队或产品团队留言，欢迎通过我们的官方邮箱或者扫码加入钉群与我们联系：[CFLUE@alibabacloud.com](mailto:CFLUE@alibabacloud.com)。我们的团队将竭诚为您提供帮助和支持。
+Thank you very much for your interest in the Agentar series! If you would like to leave a message for our research or product team, or if you are interested in collaborating with us to build a high-quality financial COT dataset, feel free to reach out to us via our official email: [yanchang.zxk@antgroup.com]. Our team is dedicated to providing you with assistance and support.
 

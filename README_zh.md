@@ -271,7 +271,7 @@ Agentar-DeepFinance-100K的价值不仅在于其数据质量的优秀表现，�
 
 ## 🔥 ​最新动态
 
-- **2025.7.25**  **Agentar-DeepFinance-100K数据集**已经开源，其中1K高质量合成精标数据（FinRA: financial real annotations）、反事实合成与自反思改写数据由于合规审核原因将在后续进行披露，另有15K的FinCAS安全合规数据，因存在有毒文本，遵循开源惯例未进行开源🔥🔥🔥
+- **2025.7.25**  **Agentar-DeepFinance-100K数据集**已经开源，其中1K高质量合成精标数据FinRA（FinRA: financial real annotations）、反事实合成与自反思改写数据由于合规审核原因将在后续进行披露，另有15K的FinCAS(FinCAS: financial compliance and security)安全合规数据，因存在有毒文本，遵循开源惯例未进行开源🔥🔥🔥
 - **2025.7.24** **Finova金融评测基准**已发布，Finova从智能体执行任务能力、复杂推理能力、安全合规能力这三个真实场景中最受关注的维度来对模型进行考察，其中Agentar-DeepFinance系列CoT数据集对复杂推理能力、安全合规评测能力进行了深度支持🚀🚀🚀
 - **2025.7.22** **Agentar-Fin-R1**的技术报告《Agentar-Fin-R1: Enhancing Financial Intelligence through Domain Expertise, Training Efficiency, and Advanced Reasoning》已发布，Agentar-Fin-R1使用了部分Agentar-DeepFinance系列CoT数据集进行训练，Agentar-DeepFinance系列CoT数据集助力Agentar-Fin-R1在所有金融评测基准上——包括Fineva、FinEval、FinanceIQ和蚂蚁数科全新提出的Finova——均达到业界最优水平，超越业界开源金融大模型，也包括GPT-o1、DeepSeek-R1等超大尺寸通用推理模型。 🚀🚀🚀
 - **2025.7.12** **Agentar-DeepFinance-100K**的技术报告《Agentar-DeepFinance-100K: A Large-Scale Financial Dataset via
