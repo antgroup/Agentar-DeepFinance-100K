@@ -7,7 +7,7 @@
 
 </div>
 <div align="center">
-  <h3>一个 · 大规模 · 金融行业深度 · CoT数据集</h3>
+  <h3>大规模 · 金融行业深度 · CoT数据集</h3>
 </div>
 <div>
 <br>

@@ -7,7 +7,7 @@
 
 </div>
 <div align="center">
-  <h3>A · large-scale · in-depth financial industry · CoT dataset</h3>
+  <h3>large-scale · in-depth financial industry · CoT dataset</h3>
 </div>
 <div>
 <br>
@@ -24,7 +24,7 @@
 
 <div align="center">
 
-**中文** | [**EN**](README.md)
+[**中文**](README_zh.md) | **EN**
 
 </div>
 
