@@ -16,7 +16,7 @@
 
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/inclusionAI/Agentar-DeepFinance-100K)
+[![Data](https://img.shields.io/badge/Data-4d5eff?style=for-the-badge&logo=huggingface&logoColor=ffffff&labelColor)](https://huggingface.co/datasets/antgroup/Agentar-DeepFinance-100K)
 [![arXiv](https://img.shields.io/badge/arXiv-2507.12901-b31b1b.svg?style=for-the-badge)](https://arxiv.org/abs/2507.12901)
 </div>
 
